@@ -192,7 +192,7 @@ class GoRouterDelegate extends RouterDelegate<Uri>
   /// 更新routes
   void setRoutes(List<GoRoute> routes) {
     log.info('setRoutes $routes');
-    routes
+    this.routes
       ..clear()
       ..addAll(routes);
     _namedMatches.clear();
