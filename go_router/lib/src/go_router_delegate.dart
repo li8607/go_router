@@ -189,6 +189,16 @@ class GoRouterDelegate extends RouterDelegate<Uri>
     notifyListeners();
   }
 
+  /// 更新routes
+  void setRoutes(List<GoRoute> routes) {
+    log.info('setRoutes $routes');
+    routes
+      ..clear()
+      ..addAll(routes);
+    _cacheNamedRoutes(routes, '', _namedMatches);
+    refresh();
+  }
+
   /// Get the current location, e.g. /family/f2/person/p1
   String get location =>
       _addQueryParams(_matches.last.subloc, _matches.last.queryParams);
