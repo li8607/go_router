@@ -195,6 +195,7 @@ class GoRouterDelegate extends RouterDelegate<Uri>
     routes
       ..clear()
       ..addAll(routes);
+    _namedMatches.clear();
     _cacheNamedRoutes(routes, '', _namedMatches);
     refresh();
   }
