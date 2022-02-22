@@ -122,6 +122,9 @@ class GoRouter extends ChangeNotifier with NavigatorObserver {
   /// Refresh the route.
   void refresh() => routerDelegate.refresh();
 
+  /// Refresh the route.
+  void setRoutes(List<GoRoute> routes) => routerDelegate.setRoutes(routes);
+
   /// Set the app's URL path strategy (defaults to hash). call before runApp().
   static void setUrlPathStrategy(UrlPathStrategy strategy) =>
       setUrlPathStrategyImpl(strategy);
